@@ -1,0 +1,19 @@
+{
+  "name": "p-cypress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cypress": "^12.6.0",
+    "faker": "^5.5.3"
+  },
+  "devDependencies": {
+    "@types/faker": "^6.6.9"
+  }
+}
