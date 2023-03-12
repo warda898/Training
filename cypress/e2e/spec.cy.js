@@ -26,9 +26,15 @@ const email = `${id}sim@gmail.com`
     cy.get('#input-password').type(Userlogin.password)
     cy.get('#input-confirm').type(Userlogin.password)
     cy.get('[type="checkbox"]').should ('be.visible').click()
-    //cy.get('.pull-right > .btn').click()
-    cy.get('input[value="Continue"]').should ('be.visible').click();
-   cy.get('.caret').click()
+   cy.window().document().then(function (doc) 
+    {
+      doc.addEventListener('click', () => {
+      setTimeout(function () { doc.location.reload() }, 5000) 
+     
+    })
+   }) 
+     cy.get('input[value="Continue"]').should ('be.visible').click();
+      cy.get('.caret').click()
     cy.get('.dropdown-menu > :nth-child(5) > a').click()
     
    
